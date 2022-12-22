@@ -32,7 +32,7 @@ def StartingWindow():
                 if element.collidepoint(pygame.mouse.get_pos()):
                     # Dla kółka
                     if circleTurn:
-                        pygame.draw.circle(screen, white,[element.left+80,element.top+80] , 60,15)
+                        pygame.draw.circle(screen, grey,[element.left+80,element.top+80] , 60,15)
                         pygame.display.update()
                     # Dla krzyżyka
                     else:
@@ -71,6 +71,8 @@ def SettingColors():
     global lightGreen
     global lightRed
     global lightYellow
+    global grey
+    grey = (105,105,105)
     black = (0, 0, 0)
     white = (255, 255, 255)
     lightBlue = (24, 146, 239)
