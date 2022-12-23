@@ -23,8 +23,13 @@ def StartingWindow():
     while isRunning:
         # Pętla odpowiedzialna za aktualizowanie wyświetlania figur
         for element in rectList:
-            # Usuwanie elemntów z listy gdy została już do nich przypisana figura
+            # Usuwanie elemntów z listy gdy została już do nich przypisana figura oraz zmiana tury
             if element.left == activeCoordinateLeft and element.top == activeCoordinateTop:
+                # Zmiana tury
+                if circleTurn:
+                    circleTurn = False
+                else:
+                    circleTurn = True
                 rectList.remove(pygame.Rect(activeCoordinateLeft,activeCoordinateTop,160,160))
                 pygame.display.update()
             else:
@@ -46,11 +51,6 @@ def StartingWindow():
         for event in pygame.event.get():
             # Warunek monitorujący przyciśnięcie przycisku myszki
             if event.type == pygame.MOUSEBUTTONDOWN:
-                # Zmiana tury gracza
-                if circleTurn:
-                    circleTurn = False
-                else:
-                    circleTurn = True
                 # Pętla aktualizująca aktywne pozycje chcianego kwadratu
                 for element in rectList:
                     if element.collidepoint(pygame.mouse.get_pos()):
