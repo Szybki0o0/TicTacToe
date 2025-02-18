@@ -60,9 +60,6 @@ To run this project, you need to have Python installed along with the Pygame lib
 ## License
 This project is open-source and available under the MIT License.
 
-## Author
-[Your Name]
-
 ## Contributions
 Feel free to fork the repository, create a new branch, and submit pull requests with improvements or bug fixes.
 
